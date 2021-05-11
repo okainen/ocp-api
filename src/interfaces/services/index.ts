@@ -1,0 +1,11 @@
+export {default as IUserService} from './IUserService';
+export {default as IMailerService} from './IMailerService';
+export {default as ICourseService} from './ICourseService';
+export {default as ICourseCategoryService} from './ICourseCategoryService';
+export {default as IWeekService} from './IWeekService';
+export {default as ILectureService} from './ILectureService';
+export {default as IReadingService} from './IReadingService';
+export {default as IQuizService} from './IQuizService';
+export {default as ISingleChoiceQuestionService} from './ISingleChoiceQuestionService';
+export {default as IMultiChoiceQuestionService} from './IMultiChoiceQuestionService';
+export {default as IQuizAttemptService} from './IQuizAttemptService';

@@ -1,0 +1,11 @@
+export {default as UserService} from './UserService';
+export {default as MailerService} from './MailerService';
+export {default as CourseService} from './CourseService';
+export {default as CourseCategoryService} from './CourseCategoryService';
+export {default as WeekService} from './WeekService';
+export {default as LectureService} from './LectureService';
+// export {default as ReadingService} from './ReadingService';
+export {default as QuizService} from './QuizService';
+export {default as SingleChoiceQuestionService} from './SingleChoiceQuestionService';
+export {default as MultiChoiceQuestionService} from './MultiChoiceQuestionService';
+export {default as QuizAttemptService} from './QuizAttemptService';

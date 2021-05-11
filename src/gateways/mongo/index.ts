@@ -1,0 +1,15 @@
+export {default as UserGateway} from './UserGateway';
+export {default as RefreshTokenGateway} from './RefreshTokenGateway';
+export {default as EnrollmentGateway} from './EnrollmentGateway';
+export {default as ScheduledEventGateway} from './ScheduledEventGateway';
+export {default as FinishedStepGateway} from './FinishedStepGateway';
+export {default as CourseGateway} from './CourseGateway';
+export {default as CourseCategoryGateway} from './CourseCategoryGateway';
+export {default as FinishedCourseGateway} from './FinishedCourseGateway';
+export {default as WeekGateway} from './WeekGateway';
+export {default as LectureGateway} from './LectureGateway';
+export {default as ReadingGateway} from './ReadingGateway';
+export {default as QuizGateway} from './QuizGateway';
+export {default as SingleChoiceQuestionGateway} from './SingleChoiceQuestionGateway';
+export {default as MultiChoiceQuestionGateway} from './MultiChoiceQuestionGateway';
+export {default as QuizAttemptGateway} from './QuizAttemptGateway';
