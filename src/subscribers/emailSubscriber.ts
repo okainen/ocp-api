@@ -11,7 +11,7 @@ import {EventEmitter} from 'events';
 import config from '@/config';
 
 const {
-  app: {hostname, port}
+  app: {HOST, port}
 } = config;
 
 export default (emitter: EventEmitter, mailerService: IMailerService) => {
@@ -23,7 +23,7 @@ export default (emitter: EventEmitter, mailerService: IMailerService) => {
       email,
       'Account activation',
       'Click the link to activate the account:\n' +
-        `${hostname}:${port}/api/users/activate/${activationToken}`
+        `${HOST}:${port}/api/users/activate/${activationToken}`
     );
 
   emitter.on(
@@ -73,7 +73,7 @@ export default (emitter: EventEmitter, mailerService: IMailerService) => {
         email,
         'Email verification',
         'Click the link to verify the email:\n' +
-          `${hostname}:${port}/api/users/reset-email/${emailResetToken}`
+          `${HOST}:${port}/api/users/reset-email/${emailResetToken}`
       );
     }
   );
@@ -99,7 +99,7 @@ export default (emitter: EventEmitter, mailerService: IMailerService) => {
         email,
         'Password reset',
         'Click the link to reset the password:\n' +
-          `${hostname}:${port}/api/users/reset-forgotten-password/${passwordResetToken}`
+          `${HOST}:${port}/api/users/reset-forgotten-password/${passwordResetToken}`
       );
     }
   );

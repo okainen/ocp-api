@@ -10,7 +10,7 @@ import {RANGE_HEADER_MISSING} from '@/constants/errors';
 
 const {
   app: {
-    hostname,
+    HOST,
     port,
     lectures: {videoDir}
   }
@@ -87,7 +87,7 @@ export default class LectureController {
     const resModel = await this.lectureService.uploadVideo(
       req.currentUser,
       req.params.id,
-      `${hostname}:${port}/${videoDir}/${req.file.filename}`
+      `${HOST}:${port}/${videoDir}/${req.file.filename}`
     );
     res.status(200).json(toJson(resModel));
   };

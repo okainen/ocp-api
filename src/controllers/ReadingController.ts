@@ -6,7 +6,7 @@ import {IReadingService} from '@/interfaces/services';
 
 const {
   app: {
-    hostname,
+    HOST,
     port,
     readings: {docDir}
   }
@@ -45,7 +45,7 @@ export default class ReadingController {
     const resModel = await this.readingService.uploadDoc(
       req.currentUser,
       req.params.id,
-      `${hostname}:${port}/${docDir}/${req.file.filename}`
+      `${HOST}:${port}/${docDir}/${req.file.filename}`
     );
     res.status(200).json(toJson(resModel));
   };

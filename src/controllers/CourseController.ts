@@ -44,7 +44,7 @@ export default class CourseController {
   uploadImg = async (req: Request, res: Response) => {
     const {
       app: {
-        hostname,
+        HOST,
         port,
         users: {imgDir}
       }
@@ -52,7 +52,7 @@ export default class CourseController {
     const resModel = await this.courseService.uploadImg(
       req.currentUser,
       req.params.id,
-      `${hostname}:${port}/${imgDir}/${req.file.filename}`
+      `${HOST}:${port}/${imgDir}/${req.file.filename}`
     );
     res.status(200).json(toJson(resModel));
   };

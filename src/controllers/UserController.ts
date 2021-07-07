@@ -115,14 +115,14 @@ export default class UserController {
   uploadImg = async (req: Request, res: Response) => {
     const {
       app: {
-        hostname,
+        HOST,
         port,
         users: {imgDir}
       }
     } = config;
     const resModel = await this.userService.uploadImg(
       req.currentUser,
-      `${hostname}:${port}/${imgDir}/${req.file.filename}`
+      `${HOST}:${port}/${imgDir}/${req.file.filename}`
     );
     res.status(200).json(toJson(resModel));
   };

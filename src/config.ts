@@ -8,7 +8,7 @@ const throwErrorIfEnvVarNotSet = (envVarName: string) => {
 };
 
 const verifyEnvVars = () => {
-  throwErrorIfEnvVarNotSet('HOSTNAME');
+  throwErrorIfEnvVarNotSet('HOST');
   throwErrorIfEnvVarNotSet('PORT');
 
   throwErrorIfEnvVarNotSet('SIGNED_COOKIE_SECRET');
@@ -42,7 +42,7 @@ verifyEnvVars();
 
 export default {
   app: {
-    hostname: process.env.HOSTNAME!,
+    HOST: process.env.HOST!,
     port: process.env.PORT!,
     email: {
       host: process.env.EMAIL_HOST!,
