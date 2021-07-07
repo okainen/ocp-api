@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "shx rm -rf dist && tsc",
-    "start": "node dist/infra/index.js",
+    "start": "node dist/index.js",
     "start:dev": "nodemon"
   },
   "keywords": [],
